@@ -25,6 +25,9 @@ Context-aware. BYOM (Bring Your Own Model). Fully local. No compliance headaches
 - Beautiful, modern UI with clear visual distinction
 - Accept or reject changes before applying
 
+<img width="901" height="467" alt="image" src="https://github.com/user-attachments/assets/19bd07aa-5fd1-43d2-bc91-cb875b919a6f" />
+
+
 ### Keyboard Shortcuts
 - **`Cmd+Shift+R`** (Mac) / **`Ctrl+Shift+R`** (Windows/Linux): Trigger rewrite
 - **`Cmd+Enter`** / **`Ctrl+Enter`**: Accept revision
