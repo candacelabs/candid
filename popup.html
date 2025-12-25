@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Candid Settings</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 12px; width: 320px; }
+      .row { display: flex; gap: 8px; }
+      input { width: 100%; padding: 8px; }
+      button { padding: 8px 10px; cursor: pointer; }
+      .hint { font-size: 12px; opacity: 0.8; margin-top: 10px; line-height: 1.35; }
+      .ok { color: #1a7f37; font-size: 12px; margin-top: 8px; display: none; }
+      .err { color: #c00; font-size: 12px; margin-top: 8px; display: none; }
+      label { font-size: 12px; opacity: 0.85; display: block; margin-bottom: 4px; }
+    </style>
+  </head>
+  <body>
+    <label for="key">Model API Key</label>
+    <div class="row">
+      <input id="key" type="password" placeholder="Paste your key" autocomplete="off" />
+      <button id="save">Save</button>
+    </div>
+
+    <label for="prompt" style="margin-top: 16px;">System Prompt</label>
+    <textarea id="prompt" rows="6" style="width: 100%; padding: 8px; font-family: system-ui; font-size: 13px; line-height: 1.4; resize: vertical;" placeholder="Enter your rewrite instructions..."></textarea>
+
+    <div id="ok" class="ok">Saved.</div>
+    <div id="err" class="err"></div>
+
+    <div class="hint">
+      Works on Gmail + Outlook Web. Keyboard: Cmd+Shift+R to revise, Cmd+Enter to accept, Esc to reject.
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

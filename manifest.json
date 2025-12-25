@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Candid",
+  "version": "0.1.0",
+  "description": "Context-aware email rewriting by Candace Labs. Clear, concise communication with your own AI model.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.office.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://outlook.office.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "trigger-rewrite": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Command+Shift+R"
+      },
+      "description": "Rewrite the current email draft"
+    }
+  }
+}
